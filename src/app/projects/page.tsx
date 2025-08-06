@@ -3,7 +3,11 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import logoDaboost from '@/images/logos/daboost.svg'
 import logoDirge from '@/images/logos/dirge.svg'
+import logoGroveMotion from '@/images/logos/grove-motion.svg'
+import logoHumQuartet from '@/images/logos/hum-quartet.svg'
+import logoKanaan from '@/images/logos/kanaan.svg'
 
 const projects = [
   {
@@ -29,10 +33,12 @@ const projects = [
   {
     name: 'Hum Quartet',
     description: '1996 - 1997',
+    logo: logoHumQuartet,
   },
   {
     name: 'Daboost',
     description: '1997 - 1998',
+    logo: logoDaboost,
   },
   {
     name: 'Dirge',
@@ -47,10 +53,12 @@ const projects = [
   {
     name: 'Kanaan',
     description: '2006 - 2007',
+    logo: logoKanaan,
   },
   {
     name: 'Groove Motion',
     description: '2019 - 2020',
+    logo: logoGroveMotion,
   },
   {
     name: 'Around 6',
@@ -95,7 +103,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="size-8 object-contain"
                   unoptimized
                 />
               </div>
