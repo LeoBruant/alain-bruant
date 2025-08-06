@@ -34,19 +34,29 @@ const projects = [
     name: 'Hum Quartet',
     description: '1996 - 1997',
     logo: logoHumQuartet,
+    link: {
+      href: 'https://humquartet.bandcamp.com/album/live-at-cit-a',
+      label: 'bandcamp.com',
+      target: '_blank',
+    },
   },
   {
     name: 'Daboost',
     description: '1997 - 1998',
     logo: logoDaboost,
+    link: {
+      href: 'http://daboost.chez.com/',
+      label: 'daboost.chez.com',
+      target: '_blank',
+    },
   },
   {
     name: 'Dirge',
     description: '1999 - 2018',
     logo: logoDirge,
     link: {
-      href: 'https://en.wikipedia.org/wiki/Dirge_(band)',
-      label: 'wikipedia.org',
+      href: 'http://blight.records.free.fr/',
+      label: 'blight.records.free.fr',
       target: '_blank',
     },
   },
@@ -54,6 +64,11 @@ const projects = [
     name: 'Kanaan',
     description: '2006 - 2007',
     logo: logoKanaan,
+    link: {
+      href: 'https://kanaan1.bandcamp.com/',
+      label: 'bandcamp.com',
+      target: '_blank',
+    },
   },
   {
     name: 'Groove Motion',
@@ -63,6 +78,11 @@ const projects = [
   {
     name: 'Around 6',
     description: '2022',
+    link: {
+      href: 'https://www.facebook.com/people/Around-Six/61557902199096/',
+      label: 'facebook.com',
+      target: '_blank',
+    },
   },
   {
     name: 'Siglis Nilufer',
@@ -99,7 +119,7 @@ export default function Projects() {
         {projects.map((project) => (
           <Card as="li" key={project.name}>
             {project.logo && (
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
@@ -108,7 +128,7 @@ export default function Projects() {
                 />
               </div>
             )}
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+            <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
               {project.link ? (
                 <Card.Link
                   href={project.link.href}
